@@ -28,8 +28,6 @@ final class DessertDisplayerTests: XCTestCase {
         let expecation = self.expectation(description: "List fetched")
         let urlString = "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
         sut.fetchMealList(urlString: urlString) { (resp) in
-            print("response")
-            print(resp)
             XCTAssertNotNil(resp)
             expecation.fulfill()
             
@@ -41,8 +39,6 @@ final class DessertDisplayerTests: XCTestCase {
         let expecation = self.expectation(description: "Details Fetched")
         let MealID = "52923"
         sut.fetchDetails(id: MealID) { (resp) in
-            print("response")
-            print(resp)
             XCTAssertNotNil(resp)
             expecation.fulfill()
             
