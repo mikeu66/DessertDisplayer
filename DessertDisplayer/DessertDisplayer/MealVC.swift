@@ -47,7 +47,7 @@ class MealVC: UIViewController{
     }
     
     
-    //Pulls the image for the meal from specified URL
+    //Pulls the image for the meal from specified URL and updates mealImage with the Image pulled.
     func fetchImage(from url: URL) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard
